@@ -1,0 +1,18 @@
+.container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.button {
+    padding: 0.6rem 1rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.614);
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #013153;
+}

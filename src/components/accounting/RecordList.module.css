@@ -1,0 +1,24 @@
+.listContainer {
+    margin-top: 1rem;
+}
+
+.recordItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.income {
+    color: green;
+}
+
+.expense {
+    color: brown;
+}
+
+.button {
+    padding: 0.3rem 0.8rem;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+}

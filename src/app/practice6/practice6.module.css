@@ -1,0 +1,11 @@
+.pageContainer {
+    background-color: #ffffff;
+    min-height: 100vh;
+    font-family: system-ui, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.grow {
+    flex: 1;
+}
