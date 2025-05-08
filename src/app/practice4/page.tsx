@@ -1,7 +1,5 @@
 'use client'
 
-import { useState } from "react";
-
 export default function Practice4() {
     const fruits = ["蘋果", "香蕉", "芒果", "草莓", "葡萄"];
 

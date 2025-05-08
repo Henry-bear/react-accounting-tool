@@ -15,7 +15,8 @@ export default function LoginForm() {
         try {
             await signInWithEmailAndPassword(auth, email, password);
             setMessage("登入成功！");
-        } catch (error: any) {
+        } catch (error: unknown) {
+            console.error("登入失敗", error);
             setMessage("登入失敗！");
         }
     }

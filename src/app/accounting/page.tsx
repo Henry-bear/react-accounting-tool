@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
-import { collection, addDoc, serverTimestamp, getDocs, query, where, orderBy, doc, deleteDoc } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp, getDocs, query, where, orderBy, doc, deleteDoc, Timestamp, FieldValue } from "firebase/firestore";
 import { db } from '@/lib/firebase';
 import Header from '@/components/ui/Header';
 import styles from './accounting.module.css';
@@ -17,7 +17,7 @@ interface RecordData {
     amount: number;
     note: string;
     uid: string | undefined;
-    createdAt?: any;
+    createdAt?: Timestamp | FieldValue;
 }
 
 
@@ -36,7 +36,7 @@ export default function AccountingPage() {
         if (!loading && user === null) {
             router.push('/');
         }
-    }, [user, loading]);
+    }, [user, router, loading]);
 
     // 讀取 Firestore 資料
     useEffect(() => {

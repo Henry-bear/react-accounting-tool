@@ -15,7 +15,8 @@ export default function RegisterForm() {
         try {
             await createUserWithEmailAndPassword(auth, email, password);
             setMessage("註冊成功！")
-        } catch (error: any) {
+        } catch (error: unknown) {
+            console.error("登入失敗", error);
             setMessage("註冊失敗！");
         }
     };

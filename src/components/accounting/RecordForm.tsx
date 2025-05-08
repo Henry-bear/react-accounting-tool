@@ -1,9 +1,5 @@
 'use client';
 
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from '@/lib/firebase';
 import styles from './RecordForm.module.css';
 
 interface RecordFormProps {
